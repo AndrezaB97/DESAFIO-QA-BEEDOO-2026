@@ -84,3 +84,234 @@ Na planilha estão registrados:
 - o resultado esperado
 - o resultado obtido
 - o status do teste (Pass ou Fail)
+
+---
+
+## 5. Registro de bugs
+
+Durante a execução dos testes foram identificados alguns comportamentos que podem indicar falhas de validação ou inconsistências na aplicação.
+
+Abaixo estão descritos os principais problemas encontrados, organizados por nível de severidade.
+
+---
+
+### Bug 1 — Cadastro permitido sem preencher campos obrigatórios
+
+**Passos para reproduzir**
+
+1. Acessar a tela de cadastro de curso  
+2. Não preencher nenhum campo do formulário  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema permite o cadastro mesmo sem preencher os campos.
+
+**Resultado esperado**
+
+O sistema deveria impedir o cadastro e informar que existem campos obrigatórios.
+
+**Severidade**
+
+Alta
+
+---
+
+### Bug 2 — Data final menor que data inicial é aceita
+
+**Passos para reproduzir**
+
+1. Preencher a data de início com uma data posterior  
+2. Preencher a data final com uma data anterior  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema permite o cadastro do curso.
+
+**Resultado esperado**
+
+O sistema deveria validar as datas e impedir o cadastro quando a data final for menor que a data inicial.
+
+**Severidade**
+
+Alta
+
+---
+
+### Bug 3 — Número de vagas aceita valores negativos
+
+**Passos para reproduzir**
+
+1. Preencher o campo número de vagas com um valor negativo  
+2. Preencher os demais campos  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema permite o cadastro com número de vagas negativo.
+
+**Resultado esperado**
+
+O sistema deveria aceitar apenas valores positivos.
+
+**Severidade**
+
+Alta
+
+---
+
+### Bug 4 — Campo nome do curso aceita apenas espaços
+
+**Passos para reproduzir**
+
+1. Preencher o campo "Nome do curso" apenas com espaços  
+2. Preencher os demais campos  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema permite o cadastro.
+
+**Resultado esperado**
+
+O sistema deveria validar o campo e impedir o cadastro quando o nome contém apenas espaços.
+
+**Severidade**
+
+Média
+
+---
+
+### Bug 5 — Tipo de curso permite valor "Selecione..."
+
+**Passos para reproduzir**
+
+1. Preencher os campos do formulário  
+2. Deixar o campo "Tipo de curso" como "Selecione..."  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema permite o cadastro e salva o valor "Selecione...".
+
+**Resultado esperado**
+
+O sistema deveria exigir a seleção de um tipo de curso válido.
+
+**Severidade**
+
+Média
+
+---
+
+### Bug 6 — Curso online permite cadastro sem link de inscrição
+
+**Passos para reproduzir**
+
+1. Selecionar tipo de curso "Online"  
+2. Não preencher o campo "Link de inscrição"  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema permite o cadastro.
+
+**Resultado esperado**
+
+O sistema deveria exigir o preenchimento do link de inscrição.
+
+**Severidade**
+
+Média
+
+---
+
+### Bug 7 — Número de vagas aceita valor zero
+
+**Passos para reproduzir**
+
+1. Preencher o campo número de vagas com valor 0  
+2. Preencher os demais campos  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema permite o cadastro.
+
+**Resultado esperado**
+
+O sistema deveria exigir um número de vagas maior que zero.
+
+**Severidade**
+
+Média
+
+---
+
+### Bug 8 — URL da imagem aceita valor inválido
+
+**Passos para reproduzir**
+
+1. Inserir um texto comum no campo URL da imagem  
+2. Preencher os demais campos  
+3. Clicar em "Cadastrar curso"
+
+**Resultado atual**
+
+O sistema aceita o valor e realiza o cadastro.
+
+**Resultado esperado**
+
+O sistema deveria validar o formato da URL.
+
+**Severidade**
+
+Baixa
+
+---
+
+### Bug 9 — Campos permanecem preenchidos ao alterar tipo de curso
+
+**Passos para reproduzir**
+
+1. Selecionar tipo de curso "Presencial"  
+2. Preencher o campo endereço  
+3. Alterar o tipo para "Online"
+
+**Resultado atual**
+
+O valor preenchido anteriormente permanece no formulário.
+
+**Resultado esperado**
+
+Os campos relacionados deveriam ser limpos ao alterar o tipo de curso.
+
+**Severidade**
+
+Baixa
+
+---
+
+### Bug 10 — Informações cadastradas não aparecem na listagem
+
+**Passos para reproduzir**
+
+1. Cadastrar um curso preenchendo todos os campos  
+2. Acessar a listagem de cursos
+
+**Resultado atual**
+
+Algumas informações cadastradas não aparecem no card do curso, como link de inscrição, endereço ou nome do instrutor.
+
+**Resultado esperado**
+
+Essas informações deveriam estar visíveis na listagem ou em uma visualização detalhada.
+
+**Severidade**
+
+Baixa
+
+---
+
+
