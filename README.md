@@ -47,3 +47,15 @@ Depois disso foram realizados testes com algumas variações nos campos, como:
 - testar o comportamento do tipo de curso (online e presencial)
 
 O objetivo foi verificar se o sistema possuía validações para evitar cadastros com dados inconsistentes.
+
+---
+
+## 3. Explicação do raciocínio durante a análise
+
+Durante a exploração da aplicação procurei interagir com os diferentes campos do formulário para entender como o sistema se comportava em diferentes situações.
+
+Primeiro foi realizado um cadastro completo de curso para validar o funcionamento do fluxo principal.
+
+Depois disso foram realizados testes com variações nos campos, como deixar informações em branco, inserir valores negativos ou combinar dados inconsistentes.
+
+Também foram observados alguns comportamentos da interface, como o aparecimento de campos diferentes dependendo do tipo de curso selecionado e a forma como os dados cadastrados aparecem na listagem de cursos.
