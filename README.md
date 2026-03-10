@@ -30,3 +30,20 @@ Dependendo do tipo de curso selecionado, o sistema exibe campos adicionais:
 
 - Curso presencial → campo de endereço
 - Curso online → campo de link de inscrição
+
+---
+
+## 2. Decisões tomadas para criação dos testes
+
+Para definir os cenários de teste, primeiro explorei a aplicação para entender como o fluxo de cadastro funcionava.
+
+Inicialmente foi realizado um cadastro completo de curso para verificar o funcionamento do fluxo principal e confirmar se o curso era exibido corretamente na listagem.
+
+Depois disso foram realizados testes com algumas variações nos campos, como:
+
+- deixar campos vazios
+- inserir valores negativos
+- inserir datas inconsistentes
+- testar o comportamento do tipo de curso (online e presencial)
+
+O objetivo foi verificar se o sistema possuía validações para evitar cadastros com dados inconsistentes.
