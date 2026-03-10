@@ -59,3 +59,28 @@ Primeiro foi realizado um cadastro completo de curso para validar o funcionament
 Depois disso foram realizados testes com variações nos campos, como deixar informações em branco, inserir valores negativos ou combinar dados inconsistentes.
 
 Também foram observados alguns comportamentos da interface, como o aparecimento de campos diferentes dependendo do tipo de curso selecionado e a forma como os dados cadastrados aparecem na listagem de cursos.
+
+---
+
+## 4. Execução dos testes
+
+Os cenários de teste foram executados manualmente na aplicação disponibilizada no desafio.
+
+Durante a execução foram avaliados principalmente:
+
+- fluxo principal de cadastro de cursos
+- validação dos campos do formulário
+- cenários negativos
+- possíveis comportamentos inesperados do sistema
+
+O resultado da execução de cada cenário pode ser consultado na planilha abaixo:
+
+[https://docs.google.com/spreadsheets/d/1qE3_8hs-nTEj0TXl10GuKoC5wrCOgNJ50fUFUFqH2Pw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1qE3_8hs-nTEj0TXl10GuKoC5wrCOgNJ50fUFUFqH2Pw/edit?usp=sharing)
+
+Na planilha estão registrados:
+
+- os cenários de teste
+- os passos executados
+- o resultado esperado
+- o resultado obtido
+- o status do teste (Pass ou Fail)
