@@ -153,7 +153,7 @@ O sistema permite o cadastro com número de vagas negativo.
 
 **Resultado esperado**
 
-O sistema deveria aceitar apenas valores positivos.
+O sistema deveria validar o campo e aceitar apenas valores positivos.
 
 **Severidade**
 
@@ -263,7 +263,7 @@ O sistema aceita o valor e realiza o cadastro.
 
 **Resultado esperado**
 
-O sistema deveria validar o formato da URL.
+O sistema aceita o valor informado e realiza o cadastro sem validar o formato da URL.
 
 **Severidade**
 
@@ -314,4 +314,48 @@ Baixa
 
 ---
 
+## 6. Evidências da execução dos testes
 
+Durante a execução dos testes foram capturadas evidências em forma de prints de tela.
+
+As imagens correspondem aos cenários de teste executados e às observações realizadas durante a análise da aplicação.
+
+As evidências podem ser encontradas na pasta:
+
+/evidencias
+
+---
+
+---
+
+## 7. Observações adicionais
+
+Durante a exploração da aplicação também foram observados alguns comportamentos que podem impactar a validação dos dados ou a experiência do usuário.
+
+### Persistência dos dados no navegador
+
+Foi observado que os cursos cadastrados continuam aparecendo mesmo após atualizar a página utilizando **F5** ou **Ctrl + F5**.
+
+Isso indica que os dados parecem estar sendo armazenados no **localStorage do navegador**, e não em um banco de dados. Dessa forma, os dados permanecem disponíveis mesmo após atualizar a página.
+
+### Ausência de validação de campos obrigatórios
+
+Durante a inspeção da interface foi observado que alguns campos do formulário não possuem o atributo **required**.
+
+Isso permite que o usuário realize o cadastro mesmo sem preencher informações importantes, como por exemplo o nome do curso ou a descrição.
+
+### Campo de número de vagas sem restrição mínima
+
+Também foi observado que o campo **Número de vagas** não possui uma restrição mínima definida (por exemplo `min="0"`).
+
+Por esse motivo o sistema permite inserir valores negativos no campo, o que pode gerar dados inconsistentes no cadastro de cursos.
+
+---
+
+## 8. Considerações finais
+
+Durante a execução dos testes foi possível identificar algumas falhas de validação e comportamentos inesperados no formulário de cadastro de cursos.
+
+Os testes realizados buscaram avaliar tanto o fluxo principal da aplicação quanto cenários negativos, verificando como o sistema se comporta diante de diferentes entradas de dados.
+
+A análise também incluiu observações sobre o comportamento da interface e validações de campos, buscando identificar possíveis melhorias para a aplicação.
